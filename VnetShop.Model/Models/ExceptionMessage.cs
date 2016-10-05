@@ -19,7 +19,7 @@ namespace VnetShop.Model.Models
         public int NotificationType { set; get; }
 
         [MaxLength(500)]
-        public int Message { set; get; }
+        public string Message { set; get; }
 
         public DateTime Created { set; get; }
         public int Deleted { set; get; }
