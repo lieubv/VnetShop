@@ -3,7 +3,11 @@ using VnetShop.Model.Models;
 
 namespace VnetShop.Data.Repositories
 {
-    public class GeoFenceRepository : RepositoryBase<GeoFence>
+    public interface IGeoFenceRepository : IRepository<GeoFence>
+    {
+
+    }
+    public class GeoFenceRepository : RepositoryBase<GeoFence>, IGeoFenceRepository
     {
         public GeoFenceRepository(DbFactory dbFactory)
             : base(dbFactory)

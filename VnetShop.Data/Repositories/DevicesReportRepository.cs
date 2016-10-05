@@ -3,7 +3,11 @@ using VnetShop.Model.Models;
 
 namespace VnetShop.Data.Repositories
 {
-    public class DevicesReportRepository : RepositoryBase<DevicesReport>
+    public interface IDevicesReportRepository : IRepository<DevicesReport>
+    {
+
+    }
+    public class DevicesReportRepository : RepositoryBase<DevicesReport>, IDevicesReportRepository
     {
         public DevicesReportRepository(DbFactory dbFactory)
             : base(dbFactory)

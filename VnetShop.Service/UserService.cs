@@ -39,12 +39,12 @@ namespace VnetShop.Service
         // implemented
         public void Add(User user)
         {
-            throw new NotImplementedException();
+            _userRepository.Add(user);
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            _userRepository.Delete(id);
         }
 
         public IEnumerable<User> GetAll()
@@ -64,12 +64,12 @@ namespace VnetShop.Service
 
         public void SaveChanges()
         {
-            throw new NotImplementedException();
+            _unitOfWork.Commit();
         }
 
         public void Update(User user)
         {
-            throw new NotImplementedException();
+            _userRepository.Update(user);
         }
     }
 }

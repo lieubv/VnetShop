@@ -8,7 +8,11 @@ using VnetShop.Model.Models;
 
 namespace VnetShop.Data.Repositories
 {
-    public class CarCommandQueueRepository : RepositoryBase<CarCommandQueue>
+    public interface ICarCommandQueueRepository : IRepository<CarCommandQueue>
+    {
+
+    }
+    public class CarCommandQueueRepository : RepositoryBase<CarCommandQueue>, ICarCommandQueueRepository
     {
         public CarCommandQueueRepository(DbFactory dbFactory)
             : base(dbFactory)

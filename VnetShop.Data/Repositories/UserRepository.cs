@@ -10,7 +10,7 @@ using System.Linq;
 
 namespace VnetShop.Data.Repositories
 {
-    public interface IUserRepository
+    public interface IUserRepository : IRepository<User>
     {
         // list all methods which not inherited from RepositoryBase class
         // only special methods should be placed here

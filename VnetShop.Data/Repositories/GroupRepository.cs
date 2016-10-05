@@ -8,7 +8,11 @@ using VnetShop.Model.Models;
 
 namespace VnetShop.Data.Repositories
 {
-    public class GroupRepository : RepositoryBase<Group>
+    public interface IGroupRepository : IRepository<Group>
+    {
+
+    }
+    public class GroupRepository : RepositoryBase<Group>, IGroupRepository
     {
         public GroupRepository(DbFactory dbFactory)
             : base(dbFactory)

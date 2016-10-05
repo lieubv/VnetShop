@@ -3,7 +3,11 @@ using VnetShop.Model.Models;
 
 namespace VnetShop.Data.Repositories
 {
-    public class CommandDictionaryRepository : RepositoryBase<CommandDictionary>
+    public interface ICommandDictionaryRepository : IRepository<CommandDictionary>
+    {
+
+    }
+    public class CommandDictionaryRepository : RepositoryBase<CommandDictionary>, ICommandDictionaryRepository
     {
         public CommandDictionaryRepository(DbFactory dbFactory)
             : base(dbFactory)

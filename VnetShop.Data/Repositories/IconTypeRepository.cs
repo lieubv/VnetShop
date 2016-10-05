@@ -3,7 +3,11 @@ using VnetShop.Model.Models;
 
 namespace VnetShop.Data.Repositories
 {
-    public class IconTypeRepository : RepositoryBase<IconType>
+    public interface IIconTypeRepository : IRepository<IconType>
+    {
+
+    }
+    public class IconTypeRepository : RepositoryBase<IconType>, IIconTypeRepository
     {
         public IconTypeRepository(DbFactory dbFactory)
             : base(dbFactory)

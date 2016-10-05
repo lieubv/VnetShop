@@ -3,7 +3,11 @@ using VnetShop.Model.Models;
 
 namespace VnetShop.Data.Repositories
 {
-    public class DeviceProtocolRepository : RepositoryBase<DeviceProtocol>
+    public interface IDeviceProtocolRepository : IRepository<DeviceProtocol>
+    {
+
+    }
+    public class DeviceProtocolRepository : RepositoryBase<DeviceProtocol>, IDeviceProtocolRepository
     {
         public DeviceProtocolRepository(DbFactory dbFactory)
             : base(dbFactory)

@@ -3,7 +3,11 @@ using VnetShop.Model.Models;
 
 namespace VnetShop.Data.Repositories
 {
-    public class AccReportRepository : RepositoryBase<AccReport>
+    public interface IAccReportRepository : IRepository<AccReport>
+    {
+
+    }
+    public class AccReportRepository : RepositoryBase<AccReport>, IAccReportRepository
     {
         public AccReportRepository(DbFactory dbFactory)
             : base(dbFactory)

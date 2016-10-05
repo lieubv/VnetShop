@@ -3,7 +3,11 @@ using VnetShop.Model.Models;
 
 namespace VnetShop.Data.Repositories
 {
-    public class WebURLRepository : RepositoryBase<WebURL>
+    public interface IWebURLRepository : IRepository<WebURL>
+    {
+
+    }
+    public class WebURLRepository : RepositoryBase<WebURL>, IWebURLRepository
     {
         public WebURLRepository(DbFactory dbFactory)
             : base(dbFactory)

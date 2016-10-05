@@ -3,7 +3,11 @@ using VnetShop.Model.Models;
 
 namespace VnetShop.Data.Repositories
 {
-    public class SpeedReportRepository : RepositoryBase<SpeedReport>
+    public interface ISpeedReportRepository : IRepository<SpeedReport>
+    {
+
+    }
+    public class SpeedReportRepository : RepositoryBase<SpeedReport>, ISpeedReportRepository
     {
         public SpeedReportRepository(DbFactory dbFactory)
             : base(dbFactory)
