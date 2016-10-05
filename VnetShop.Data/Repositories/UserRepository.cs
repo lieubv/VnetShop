@@ -13,6 +13,8 @@ namespace VnetShop.Data.Repositories
     public interface IUserRepository
     {
         // list all methods which not inherited from RepositoryBase class
+        // only special methods should be placed here
+        // because all common methods declared in RepositoryBase<T>
         IEnumerable<User> GetByLoginName(string loginName);
     }
     //--------------------

@@ -64,8 +64,20 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AccReportRepository.cs" />
     <Compile Include="Repositories\CarCommandQueueRepository.cs" />
+    <Compile Include="Repositories\CommandDictionaryRepository.cs" />
+    <Compile Include="Repositories\DeviceProtocolRepository.cs" />
     <Compile Include="Repositories\DeviceRepository.cs" />
+    <Compile Include="Repositories\DevicesReportRepository.cs" />
+    <Compile Include="Repositories\ExceptionMessageRepository.cs" />
+    <Compile Include="Repositories\GeoFenceRepository.cs" />
+    <Compile Include="Repositories\GroupRepository.cs" />
+    <Compile Include="Repositories\IconTypeRepository.cs" />
+    <Compile Include="Repositories\LKLocationRepository.cs" />
+    <Compile Include="Repositories\POIRepository.cs" />
+    <Compile Include="Repositories\SpeedReportRepository.cs" />
+    <Compile Include="Repositories\UserLogRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Repositories\WebURLRepository.cs" />
     <Compile Include="VnetShopDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
