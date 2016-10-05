@@ -51,6 +51,21 @@
   <ItemGroup>
     <Compile Include="Abstract\Auditable.cs" />
     <Compile Include="Abstract\IAuditable.cs" />
+    <Compile Include="Models\AccReport.cs" />
+    <Compile Include="Models\CarCommandQueue.cs" />
+    <Compile Include="Models\CommandDictionary.cs" />
+    <Compile Include="Models\Device.cs" />
+    <Compile Include="Models\DeviceProtocol.cs" />
+    <Compile Include="Models\DevicesReport.cs" />
+    <Compile Include="Models\ExceptionMessage.cs" />
+    <Compile Include="Models\GeoFence.cs" />
+    <Compile Include="Models\Group.cs" />
+    <Compile Include="Models\IconType.cs" />
+    <Compile Include="Models\LKLocation.cs" />
+    <Compile Include="Models\POI.cs" />
+    <Compile Include="Models\SpeedReport.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserLog.cs" />
     <Compile Include="Models\WebURL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
