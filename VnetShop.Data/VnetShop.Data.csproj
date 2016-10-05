@@ -49,7 +49,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastructure\DbFactory.cs" />
+    <Compile Include="Infrastructure\Disposable.cs" />
+    <Compile Include="Infrastructure\IDbFactory.cs" />
+    <Compile Include="Infrastructure\IRepository.cs" />
+    <Compile Include="Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure\RepositoryBase.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="Migrations\201610050716430_InitialDB.cs" />
+    <Compile Include="Migrations\201610050716430_InitialDB.Designer.cs">
+      <DependentUpon>201610050716430_InitialDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AccReportRepository.cs" />
+    <Compile Include="Repositories\CarCommandQueueRepository.cs" />
+    <Compile Include="Repositories\DeviceRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="VnetShopDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -60,6 +77,15 @@
       <Project>{f4fd23ba-c18b-4506-99ca-bdfb4f08b21c}</Project>
       <Name>VnetShop.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\VnetShop.Model\VnetShop.Model.csproj">
+      <Project>{c3d4db37-bf3c-4fde-a6e3-7d380a6662d6}</Project>
+      <Name>VnetShop.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201610050716430_InitialDB.resx">
+      <DependentUpon>201610050716430_InitialDB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
