@@ -9,7 +9,7 @@ namespace VnetShop.Data.Repositories
     }
     public class WebURLRepository : RepositoryBase<WebURL>, IWebURLRepository
     {
-        public WebURLRepository(DbFactory dbFactory)
+        public WebURLRepository(IDbFactory dbFactory)
             : base(dbFactory)
         {
         }

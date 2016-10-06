@@ -14,7 +14,7 @@ namespace VnetShop.Model.Models
         [MaxLength(50)]
         public string GroupName { set; get; }
 
-        public int UserID { set; get; }
+        public int? UserID { set; get; }
 
         [MaxLength(50)]
         public string Username { set; get; }
@@ -22,9 +22,9 @@ namespace VnetShop.Model.Models
         [MaxLength(255)]
         public string Description { set; get; }
 
-        public DateTime Created { set; get; }
-        public int GroupType { set; get; }
-        public int AccountID { set; get; }
-        public bool Deleted { set; get; }
+        public DateTime? Created { set; get; }
+        public int? GroupType { set; get; }
+        public int? AccountID { set; get; }
+        public bool? Deleted { set; get; }
     }
 }

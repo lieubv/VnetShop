@@ -9,7 +9,7 @@ namespace VnetShop.Data.Repositories
     }
     public class DevicesReportRepository : RepositoryBase<DevicesReport>, IDevicesReportRepository
     {
-        public DevicesReportRepository(DbFactory dbFactory)
+        public DevicesReportRepository(IDbFactory dbFactory)
             : base(dbFactory)
         {
         }

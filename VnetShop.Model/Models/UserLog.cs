@@ -11,8 +11,8 @@ namespace VnetShop.Model.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int UserLogID { set; get; }
 
-        public int UserID { set; get; }
-        public DateTime LoginTime { set; get; }
+        public int? UserID { set; get; }
+        public DateTime? LoginTime { set; get; }
 
         [MaxLength(15)]
         public string IPAddress { set; get; }

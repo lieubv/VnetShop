@@ -11,7 +11,7 @@ namespace VnetShop.Model.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int UserID { set; get; }
 
-        public int ParentID { set; get; }
+        public int? ParentID { set; get; }
 
         [MaxLength(255)]
         public string UserName { set; get; }
@@ -22,8 +22,8 @@ namespace VnetShop.Model.Models
         [MaxLength(255)]
         public string Password { set; get; }
 
-        public int UserType { set; get; }
-        public bool Gender { set; get; }
+        public int? UserType { set; get; }
+        public bool? Gender { set; get; }
 
         [MaxLength(50)]
         public string FirstName { set; get; }
@@ -43,8 +43,8 @@ namespace VnetShop.Model.Models
         [MaxLength(255)]
         public string Address2 { set; get; }
 
-        public int Country { set; get; }
-        public int State { set; get; }
+        public int? Country { set; get; }
+        public int? State { set; get; }
 
         [MaxLength(50)]
         public string HomePhone { set; get; }
@@ -64,16 +64,16 @@ namespace VnetShop.Model.Models
         [MaxLength(100)]
         public string SecondaryEmail { set; get; }
 
-        public int Status { set; get; }
+        public int? Status { set; get; }
 
-        public DateTime UpdateTime { set; get; }
-        public DateTime Created { set; get; }
-        public bool Deleted { set; get; }
-        public int SuperAdmin { set; get; }
-        public int AllDeviceCount { set; get; }
-        public int ActivationCount { set; get; }
+        public DateTime? UpdateTime { set; get; }
+        public DateTime? Created { set; get; }
+        public bool? Deleted { set; get; }
+        public int? SuperAdmin { set; get; }
+        public int? AllDeviceCount { set; get; }
+        public int? ActivationCount { set; get; }
 
-        public int MoneyCount { set; get; }
+        public int? MoneyCount { set; get; }
 
         [MaxLength(50)]
         public string GuardianName { set; get; }
@@ -81,8 +81,8 @@ namespace VnetShop.Model.Models
         [MaxLength(50)]
         public string GuardianPhone { set; get; }
 
-        public int SubUserCount { set; get; }
-        public int DeviceCount { set; get; }
-        public bool VoiceSwitch { set; get; }
+        public int? SubUserCount { set; get; }
+        public int? DeviceCount { set; get; }
+        public bool? VoiceSwitch { set; get; }
     }
 }

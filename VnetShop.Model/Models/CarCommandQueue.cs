@@ -20,16 +20,16 @@ namespace VnetShop.Model.Models
         public string CommandText { set; get; }
 
         [Required]
-        public DateTime CreateDate { set; get; }
+        public DateTime? CreateDate { set; get; }
 
         [Required]
-        public bool IsSend { set; get; }
+        public bool? IsSend { set; get; }
 
         [Required]
-        public DateTime SendDate { set; get; }
+        public DateTime? SendDate { set; get; }
 
-        public bool IsResponse { set; get; }
-        public DateTime ResponseDate { set; get; }
+        public bool? IsResponse { set; get; }
+        public DateTime? ResponseDate { set; get; }
 
         [MaxLength(500)]
         public string ResponseText { set; get; }
@@ -37,7 +37,7 @@ namespace VnetShop.Model.Models
         [MaxLength(200)]
         public string CommandName { set; get; }
 
-        public bool IsOfflineSend { set; get; }
+        public bool? IsOfflineSend { set; get; }
 
         [MaxLength(500)]
         public string Infos { set; get; }

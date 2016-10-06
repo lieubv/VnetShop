@@ -9,7 +9,7 @@ namespace VnetShop.Data.Repositories
 
     public class ExceptionMessageRepository : RepositoryBase<ExceptionMessage>, IExceptionMessageRepository
     {
-        public ExceptionMessageRepository(DbFactory dbFactory)
+        public ExceptionMessageRepository(IDbFactory dbFactory)
             : base(dbFactory)
         {
         }

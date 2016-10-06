@@ -9,7 +9,7 @@ namespace VnetShop.Data.Repositories
     }
     public class IconTypeRepository : RepositoryBase<IconType>, IIconTypeRepository
     {
-        public IconTypeRepository(DbFactory dbFactory)
+        public IconTypeRepository(IDbFactory dbFactory)
             : base(dbFactory)
         {
         }

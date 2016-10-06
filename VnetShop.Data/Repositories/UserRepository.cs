@@ -20,7 +20,7 @@ namespace VnetShop.Data.Repositories
     //--------------------
     public class UserRepository : RepositoryBase<User>, IUserRepository
     {
-        public UserRepository(DbFactory dbFactory)
+        public UserRepository(IDbFactory dbFactory)
             : base(dbFactory)
         {
         }

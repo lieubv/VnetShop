@@ -9,7 +9,7 @@ namespace VnetShop.Data.Repositories
     }
     public class SpeedReportRepository : RepositoryBase<SpeedReport>, ISpeedReportRepository
     {
-        public SpeedReportRepository(DbFactory dbFactory)
+        public SpeedReportRepository(IDbFactory dbFactory)
             : base(dbFactory)
         {
         }

@@ -9,7 +9,7 @@ namespace VnetShop.Data.Repositories
     }
     public class LKLocationRepository : RepositoryBase<LKLocation>, ILKLocationRepository
     {
-        public LKLocationRepository(DbFactory dbFactory)
+        public LKLocationRepository(IDbFactory dbFactory)
             : base(dbFactory)
         {
         }

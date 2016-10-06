@@ -9,7 +9,7 @@ namespace VnetShop.Data.Repositories
     }
     public class CommandDictionaryRepository : RepositoryBase<CommandDictionary>, ICommandDictionaryRepository
     {
-        public CommandDictionaryRepository(DbFactory dbFactory)
+        public CommandDictionaryRepository(IDbFactory dbFactory)
             : base(dbFactory)
         {
         }

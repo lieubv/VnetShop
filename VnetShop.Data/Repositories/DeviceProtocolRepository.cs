@@ -9,7 +9,7 @@ namespace VnetShop.Data.Repositories
     }
     public class DeviceProtocolRepository : RepositoryBase<DeviceProtocol>, IDeviceProtocolRepository
     {
-        public DeviceProtocolRepository(DbFactory dbFactory)
+        public DeviceProtocolRepository(IDbFactory dbFactory)
             : base(dbFactory)
         {
         }

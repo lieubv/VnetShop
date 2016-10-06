@@ -9,7 +9,7 @@ namespace VnetShop.Data.Repositories
     }
     public class POIRepository : RepositoryBase<POI>, IPOIRepository
     {
-        public POIRepository(DbFactory dbFactory)
+        public POIRepository(IDbFactory dbFactory)
             : base(dbFactory)
         {
         }

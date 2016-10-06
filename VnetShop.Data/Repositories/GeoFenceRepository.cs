@@ -9,7 +9,7 @@ namespace VnetShop.Data.Repositories
     }
     public class GeoFenceRepository : RepositoryBase<GeoFence>, IGeoFenceRepository
     {
-        public GeoFenceRepository(DbFactory dbFactory)
+        public GeoFenceRepository(IDbFactory dbFactory)
             : base(dbFactory)
         {
         }

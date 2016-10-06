@@ -9,7 +9,7 @@ namespace VnetShop.Data.Repositories
     }
     public class AccReportRepository : RepositoryBase<AccReport>, IAccReportRepository
     {
-        public AccReportRepository(DbFactory dbFactory)
+        public AccReportRepository(IDbFactory dbFactory)
             : base(dbFactory)
         {
         }

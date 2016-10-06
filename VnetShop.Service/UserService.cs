@@ -12,13 +12,15 @@ namespace VnetShop.Service
 
         void Update(User user);
 
+        void Delete(User user);
+
         void Delete(int id);
+
+        User GetById(int id);
 
         IEnumerable<User> GetAll();
 
-        IEnumerable<User> GetAllPaging(int page, int pageSize, out int totalRecord);
-
-        User GetById(int id);
+        //IEnumerable<User> GetAllPaging(int pageIndex, int pageSize, out int totalRecord);
 
         //IEnumerable<User> GetAllByLoginNamePaging(int page, int pageSize, out int totalRecord);
 
@@ -27,10 +29,11 @@ namespace VnetShop.Service
 
     public class UserService : IUserService
     {
-        IUserRepository _userRepository;
-        IUnitOfWork _unitOfWork;
+        private IUserRepository _userRepository;
+        private IUnitOfWork _unitOfWork;
+
         // using best practive: dependency injection
-        public UserService(IUserRepository userRepository,IUnitOfWork unitOfWork)
+        public UserService(IUserRepository userRepository, IUnitOfWork unitOfWork)
         {
             this._userRepository = userRepository;
             this._unitOfWork = unitOfWork;
@@ -47,19 +50,14 @@ namespace VnetShop.Service
             _userRepository.Delete(id);
         }
 
-        public IEnumerable<User> GetAll()
+        public void Update(User user)
         {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<User> GetAllPaging(int page, int pageSize, out int totalRecord)
-        {
-            throw new NotImplementedException();
+            _userRepository.Update(user);
         }
 
         public User GetById(int id)
         {
-            throw new NotImplementedException();
+            return _userRepository.GetSingleById(id);
         }
 
         public void SaveChanges()
@@ -67,9 +65,14 @@ namespace VnetShop.Service
             _unitOfWork.Commit();
         }
 
-        public void Update(User user)
+        public void Delete(User user)
         {
-            _userRepository.Update(user);
+            _userRepository.Delete(user);
+        }
+
+        public IEnumerable<User> GetAll()
+        {
+           return  _userRepository.GetAll();
         }
     }
 }

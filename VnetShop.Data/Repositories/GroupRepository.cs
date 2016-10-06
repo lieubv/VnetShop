@@ -14,7 +14,7 @@ namespace VnetShop.Data.Repositories
     }
     public class GroupRepository : RepositoryBase<Group>, IGroupRepository
     {
-        public GroupRepository(DbFactory dbFactory)
+        public GroupRepository(IDbFactory dbFactory)
             : base(dbFactory)
         {
 

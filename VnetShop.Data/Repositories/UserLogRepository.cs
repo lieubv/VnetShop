@@ -9,7 +9,7 @@ namespace VnetShop.Data.Repositories
     }
     public class UserLogRepository : RepositoryBase<UserLog>,IUserLogRepository
     {
-        public UserLogRepository(DbFactory dbFactory)
+        public UserLogRepository(IDbFactory dbFactory)
             : base(dbFactory)
         {
         }

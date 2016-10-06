@@ -14,7 +14,7 @@ namespace VnetShop.Data.Repositories
     }
     public class CarCommandQueueRepository : RepositoryBase<CarCommandQueue>, ICarCommandQueueRepository
     {
-        public CarCommandQueueRepository(DbFactory dbFactory)
+        public CarCommandQueueRepository(IDbFactory dbFactory)
             : base(dbFactory)
         {
         }
