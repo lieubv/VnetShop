@@ -34,7 +34,7 @@ namespace VnetShop.Data
         public DbSet<User> Users { set; get; }
         public DbSet<UserLog> UserLog { set; get; }
         public DbSet<WebURL> WebURL { set; get; }
-
+        public DbSet<Error> Errors { set; get; }
         // run when we make an instance of Entity Framework
         protected override void OnModelCreating(DbModelBuilder builder)
         {

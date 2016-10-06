@@ -1,39 +1,109 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using VnetShop.Model.Models;
+using VnetShop.Service;
+using VnetShop.Web.Infrastructure.Core;
 
 namespace VnetShop.Web.Api
 {
-    public class UserController : ApiController
+    [RoutePrefix("api/user")]
+    public class UserController : ApiControllerBase
     {
-        // GET api/<controller>
-        public IEnumerable<string> Get()
+        private IUserService _userService;
+
+        public UserController(IErrorService errorService, IUserService userService)
+            : base(errorService)
         {
-            return new string[] { "value1", "value2" };
+            this._userService = userService;
         }
 
-        // GET api/<controller>/5
-        public string Get(int id)
+        // Create
+        public HttpResponseMessage Post(HttpRequestMessage request, User user)
         {
-            return "value";
+            return CreateHttpResponse(request, () =>
+            {
+                HttpResponseMessage response = null;
+                if (ModelState.IsValid)
+                {
+                    var result = _userService.Add(user);
+                    _userService.SaveChanges();
+
+                    response = request.CreateResponse(HttpStatusCode.Created, result);
+                }
+                else
+                {
+                    request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+
+                return response;
+            });
         }
 
-        // POST api/<controller>
-        public void Post([FromBody]string value)
+        // Update
+        public HttpResponseMessage Put(HttpRequestMessage request, User user)
         {
+            return CreateHttpResponse(request, () =>
+            {
+                HttpResponseMessage response = null;
+                if (ModelState.IsValid)
+                {
+                    _userService.Update(user);
+                    _userService.SaveChanges();
+
+                    response = request.CreateResponse(HttpStatusCode.OK);
+                }
+                else
+                {
+                    request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+
+                return response;
+            });
         }
 
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
+        // Delete
+        public HttpResponseMessage Delete(HttpRequestMessage request, int id)
         {
+            return CreateHttpResponse(request, () =>
+            {
+                HttpResponseMessage response = null;
+                if (ModelState.IsValid)
+                {
+                    var result = _userService.Delete(id);
+                    _userService.SaveChanges();
+
+                    response = request.CreateResponse(HttpStatusCode.Created, result);
+                }
+                else
+                {
+                    request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+
+                return response;
+            });
         }
 
-        // DELETE api/<controller>/5
-        public void Delete(int id)
+        // Get
+        [Route("getall")]
+        public HttpResponseMessage Get(HttpRequestMessage request)
         {
+            return CreateHttpResponse(request, () =>
+            {
+                HttpResponseMessage response = null;
+                if (ModelState.IsValid)
+                {
+                    var listUser = _userService.GetAll();
+
+                    response = request.CreateResponse(HttpStatusCode.OK, listUser);
+                }
+                else
+                {
+                    request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+
+                return response;
+            });
         }
     }
 }

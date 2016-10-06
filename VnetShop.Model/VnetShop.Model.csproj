@@ -57,6 +57,7 @@
     <Compile Include="Models\Device.cs" />
     <Compile Include="Models\DeviceProtocol.cs" />
     <Compile Include="Models\DevicesReport.cs" />
+    <Compile Include="Models\Error.cs" />
     <Compile Include="Models\ExceptionMessage.cs" />
     <Compile Include="Models\GeoFence.cs" />
     <Compile Include="Models\Group.cs" />

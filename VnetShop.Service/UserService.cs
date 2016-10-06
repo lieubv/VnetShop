@@ -8,13 +8,13 @@ namespace VnetShop.Service
 {
     public interface IUserService
     {
-        void Add(User user);
+        User Add(User user);
 
         void Update(User user);
 
-        void Delete(User user);
+        User Delete(User user);
 
-        void Delete(int id);
+        User Delete(int id);
 
         User GetById(int id);
 
@@ -40,14 +40,14 @@ namespace VnetShop.Service
         }
 
         // implemented
-        public void Add(User user)
+        public User Add(User user)
         {
-            _userRepository.Add(user);
+            return _userRepository.Add(user);
         }
 
-        public void Delete(int id)
+        public User Delete(int id)
         {
-            _userRepository.Delete(id);
+            return _userRepository.Delete(id);
         }
 
         public void Update(User user)
@@ -65,9 +65,9 @@ namespace VnetShop.Service
             _unitOfWork.Commit();
         }
 
-        public void Delete(User user)
+        public User Delete(User user)
         {
-            _userRepository.Delete(user);
+           return _userRepository.Delete(user);
         }
 
         public IEnumerable<User> GetAll()
