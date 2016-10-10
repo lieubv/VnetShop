@@ -1,9 +1,13 @@
-﻿using System.Net;
+﻿using AutoMapper;
+using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using VnetShop.Model.Models;
 using VnetShop.Service;
 using VnetShop.Web.Infrastructure.Core;
+using VnetShop.Web.Models;
+using VnetShop.Web.Infrastructure.Extensions;
 
 namespace VnetShop.Web.Api
 {
@@ -19,14 +23,18 @@ namespace VnetShop.Web.Api
         }
 
         // Create
-        public HttpResponseMessage Post(HttpRequestMessage request, User user)
+        [Route("add")]
+        public HttpResponseMessage Post(HttpRequestMessage request, UserViewModel userVm)
         {
             return CreateHttpResponse(request, () =>
             {
                 HttpResponseMessage response = null;
                 if (ModelState.IsValid)
                 {
-                    var result = _userService.Add(user);
+                    User newUser = new User();
+                    newUser.UpdateUser(userVm);
+
+                    var result = _userService.Add(newUser);
                     _userService.SaveChanges();
 
                     response = request.CreateResponse(HttpStatusCode.Created, result);
@@ -41,14 +49,18 @@ namespace VnetShop.Web.Api
         }
 
         // Update
-        public HttpResponseMessage Put(HttpRequestMessage request, User user)
+        [Route("update")]
+        public HttpResponseMessage Put(HttpRequestMessage request, UserViewModel userVm)
         {
             return CreateHttpResponse(request, () =>
             {
                 HttpResponseMessage response = null;
                 if (ModelState.IsValid)
                 {
-                    _userService.Update(user);
+                    var userDb = _userService.GetById(userVm.UserID);
+                    userDb.UpdateUser(userVm);
+
+                    _userService.Update(userDb);
                     _userService.SaveChanges();
 
                     response = request.CreateResponse(HttpStatusCode.OK);
@@ -94,6 +106,8 @@ namespace VnetShop.Web.Api
                 if (ModelState.IsValid)
                 {
                     var listUser = _userService.GetAll();
+
+                    var listUserVm = Mapper.Map<List<UserViewModel>>(listUser);
 
                     response = request.CreateResponse(HttpStatusCode.OK, listUser);
                 }
