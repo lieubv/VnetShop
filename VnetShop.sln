@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VnetShop.UnitTest", "VnetSh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VnetShop.Web", "VnetShop.Web\VnetShop.Web.csproj", "{BEBA3FE1-F783-46E5-8D1F-12D85D54DDF3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketService", "SocketService\SocketService.csproj", "{23E96FA5-2137-4ED4-93C8-A7B4F95A1311}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{19895569-1534-427A-9B1C-1EBB0027AF30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{BEBA3FE1-F783-46E5-8D1F-12D85D54DDF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEBA3FE1-F783-46E5-8D1F-12D85D54DDF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEBA3FE1-F783-46E5-8D1F-12D85D54DDF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23E96FA5-2137-4ED4-93C8-A7B4F95A1311}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23E96FA5-2137-4ED4-93C8-A7B4F95A1311}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23E96FA5-2137-4ED4-93C8-A7B4F95A1311}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23E96FA5-2137-4ED4-93C8-A7B4F95A1311}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19895569-1534-427A-9B1C-1EBB0027AF30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19895569-1534-427A-9B1C-1EBB0027AF30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19895569-1534-427A-9B1C-1EBB0027AF30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19895569-1534-427A-9B1C-1EBB0027AF30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

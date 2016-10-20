@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E6CBE05-414D-40EA-BD9F-5AFA892BCC2E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ThinkRaceTest</RootNamespace>
+    <AssemblyName>ThinkRaceTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\..\..\z.Reference\NewAPP\bin\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\..\..\z.Reference\NewAPP\bin\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder">
+      <HintPath>..\..\..\z.Reference\NewAPP\bin\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\..\..\z.Reference\GPS_NewDeploy\SS\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="NewGPS2012">
+      <HintPath>..\..\..\z.Reference\NewAPP\bin\NewGPS2012.dll</HintPath>
+    </Reference>
+    <Reference Include="NewGPS2012.APP">
+      <HintPath>..\..\..\z.Reference\NewAPP\bin\NewGPS2012.APP.dll</HintPath>
+    </Reference>
+    <Reference Include="NewGPS2012.Entity">
+      <HintPath>..\..\..\z.Reference\NewAPP\bin\NewGPS2012.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="NewGPS2012.Framework">
+      <HintPath>..\..\..\z.Reference\NewAPP\bin\NewGPS2012.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="NewGPS2012.Logic">
+      <HintPath>..\..\..\z.Reference\NewAPP\bin\NewGPS2012.Logic.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\z.Reference\NewAPP\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Thinkrace.CacheManager">
+      <HintPath>..\..\..\z.Reference\GPS_NewDeploy\SS\Thinkrace.CacheManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Thinkrace.Common">
+      <HintPath>..\..\..\z.Reference\GPS_NewDeploy\SS\Thinkrace.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Thinkrace.DataLogic">
+      <HintPath>..\..\..\z.Reference\GPS_NewDeploy\SS\Thinkrace.DataLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="Thinkrace.Domain">
+      <HintPath>..\..\..\z.Reference\GPS_NewDeploy\SS\Thinkrace.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="Thinkrace.Protocol">
+      <HintPath>..\..\..\z.Reference\GPS_NewDeploy\SS\Thinkrace.Protocol.dll</HintPath>
+    </Reference>
+    <Reference Include="VDataProcessing.DAL">
+      <HintPath>..\..\..\z.Reference\Vdata\20151201\VDataProcessing.DAL.dll</HintPath>
+    </Reference>
+    <Reference Include="VDataProcessing.Protocol">
+      <HintPath>..\..\..\z.Reference\Vdata\20151201\VDataProcessing.Protocol.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

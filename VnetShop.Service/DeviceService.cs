@@ -1,4 +1,5 @@
-﻿using VnetShop.Data.Infrastructure;
+﻿using System;
+using VnetShop.Data.Infrastructure;
 using VnetShop.Data.Repositories;
 using VnetShop.Model.Models;
 
@@ -13,6 +14,8 @@ namespace VnetShop.Service
         void Delete(Device device);
 
         Device GetById(int id);
+
+        Device GetBySerialNumber(string serialNumber);
 
         void SaveChanges();
     }
@@ -47,6 +50,11 @@ namespace VnetShop.Service
         public Device GetById(int id)
         {
             return _deviceRepository.GetSingleById(id);
+        }
+
+        public Device GetBySerialNumber(string serialNumber)
+        {
+            return _deviceRepository.GetBySerialNumber(serialNumber);
         }
 
         public void SaveChanges()

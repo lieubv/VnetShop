@@ -55,6 +55,7 @@
     <Compile Include="Abstract\Auditable.cs" />
     <Compile Include="Abstract\IAuditable.cs" />
     <Compile Include="Models\AccReport.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\CarCommandQueue.cs" />
     <Compile Include="Models\CommandDictionary.cs" />
     <Compile Include="Models\Device.cs" />
